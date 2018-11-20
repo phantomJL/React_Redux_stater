@@ -56,52 +56,52 @@ export default (user) => {
         loader: () => import('../pages/home'),
         loading: () => <Loading />
       }),
-      enter: requireAuth,
+      enter: triggerEnter,
       loadData: HomeLoadData
     },
 
-    {
-      path: '/posts/:id',
-      exact: true,
-      head: Head,
-      // component: asyncRouteComponent({
-      //   loader: () => import('../pages/posts-detail')
-      // }),
-      component: Loadable({
-        loader: () => import('../pages/posts-detail'),
-        loading: () => <Loading />
-      }),
-      enter: requireAuth,
-      loadData: PostsDetailLoadData
-    },
-
-    {
-      path: '/topics',
-      exact: true,
-      head: Head,
-      // component: asyncRouteComponent({
-      //   loader: () => import('../pages/topics')
-      // }),
-      component: Loadable({
-        loader: () => import('../pages/topics'),
-        loading: () => <Loading />
-      }),
-      enter: requireAuth
-    },
-
-    {
-      path: '/sign-in',
-      exact: true,
-      // head: Head,
-      // component: asyncRouteComponent({
-        // loader: () => import('../pages/sign-in')
-      // }),
-      component: Loadable({
-        loader: () => import('../pages/sign-in'),
-        loading: () => <Loading />
-      }),
-      enter: requireTourists
-    },
+    // {
+    //   path: '/posts/:id',
+    //   exact: true,
+    //   head: Head,
+    //   // component: asyncRouteComponent({
+    //   //   loader: () => import('../pages/posts-detail')
+    //   // }),
+    //   component: Loadable({
+    //     loader: () => import('../pages/posts-detail'),
+    //     loading: () => <Loading />
+    //   }),
+    //   enter: requireAuth,
+    //   loadData: PostsDetailLoadData
+    // },
+    //
+    // {
+    //   path: '/topics',
+    //   exact: true,
+    //   head: Head,
+    //   // component: asyncRouteComponent({
+    //   //   loader: () => import('../pages/topics')
+    //   // }),
+    //   component: Loadable({
+    //     loader: () => import('../pages/topics'),
+    //     loading: () => <Loading />
+    //   }),
+    //   enter: requireAuth
+    // },
+    //
+    // {
+    //   path: '/sign-in',
+    //   exact: true,
+    //   // head: Head,
+    //   // component: asyncRouteComponent({
+    //     // loader: () => import('../pages/sign-in')
+    //   // }),
+    //   component: Loadable({
+    //     loader: () => import('../pages/sign-in'),
+    //     loading: () => <Loading />
+    //   }),
+    //   enter: requireTourists
+    // },
 
     {
       path: '**',

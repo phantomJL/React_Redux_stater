@@ -13,6 +13,7 @@ const AJAX = ({ url = '', method = 'get', data = {}, headers = {} }) => {
     option.data = data;
   }
 
+
   return axios(option).then(resp => {
     if (resp && resp.data) {
       let res = resp.data;
